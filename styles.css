@@ -1,6 +1,19 @@
 @font-face {
-    font-family: 'emoji';
-    src: url('./emoji.ttf') format('truetype');
+    font-family: 'fn-normal';
+    src: url('./assets/fonts/fn-normal.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'fn-bold';
+    src: url('./assets/fonts/fn-bold.woff2') format('woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'fn-title';
+    src: url('./assets/fonts/fn-title.woff2') format('woff2');
+    font-weight: bold;
 }
 
 * {
@@ -10,51 +23,124 @@
 }
 
 body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     overflow: hidden;
-    font-family: 'Comic Sans MS', cursive, 'emoji', sans-serif;
-    position: relative;
+    font-family: 'font-normal', sans-serif;
     height: 100vh;
-    background-image: url(./assets/background.jpg);
+    background-image: url(./assets/images/background.jpg);
     background-position: center;
 }
 
-img {
-    position: absolute;
-    top: 10%;
-    height: 75%;
+h1 {
+    color: #fff;
+    font-family: 'fn-title', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0 5px 3px rgba(0,0,0,.2);
+    text-transform: uppercase;
 }
 
-img:first-of-type {
-    left: 0;
-    transform: scaleX(-1);
+h2 {
+    color: #fff;
+    font-family: 'fn-bold', sans-serif;
+    font-size: 2rem;
+    text-shadow: 0 5px 3px rgba(0,0,0,.2);
 }
 
-img:last-of-type {
-    right: 0;
-    /* rotate the image 180 degrees */
+p, label {
+    color: #fff;
+    font-family: 'fn-normal', sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 0 5px 3px rgba(0,0,0,.2);
 }
 
-.middle {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+a {
+    color: #fff;
+    font-family: 'fn-normal', sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 0 5px 3px rgba(0,0,0,.2);
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.middle h1 {
-    font-size: 64px;
-    color: black;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke: 3px;
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem;
 }
 
-.middle h2 {
-    font-size: 32px;
-    color: black;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke: 2px;
+.right {
+    margin: 2rem;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'fn-normal', sans-serif;
+    font-size: 1.5rem;
+}
+
+input:active, input:focus {
+    outline: none;
+}
+
+button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'fn-normal', sans-serif;
+    font-size: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.examples {
+    margin-top: 1rem;
+}
+
+.examples ul {
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside; 
+    list-style-type: none;
+}
+
+.examples li {
+    margin-bottom: 5px; 
+    padding-left: 20px;
+    background: url('assets/images/hashtag.png') no-repeat left center; 
+    background-size: 15px 15px;
+}
+
+.results-item {
+    display: flex;
+}
+
+.results-item img {
+    width: 9rem;
+    height: 9rem;
+}
+
+.results-text {
+    margin-left: 1rem;
+}
+
+.results-analysis {
+    margin-top: 1rem;
+}
+
+
 
 .rainbow {
     background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
