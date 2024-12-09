@@ -18,7 +18,7 @@
                 <h1>Item Shop Predictor</h1>
                 <p>When will it be in the item shop?</p>
             </div>
-            <form class="input">
+            <form class="form">
                 <label for="s">Item Name:</label>
                 <div>
                     <input type="text" id="search-box" name="s" placeholder="E.g. Star Wand" autocomplete="off">
@@ -39,34 +39,44 @@
                     <li><a href="?s=Star Wand">Star Wand</a></li>
                 </ul>
             </div>
-
         </div>
-        <footer>
+        <div class="credits">
             <p>Created by <a target="_blank" href="https://jackweller.me/">Jack Weller</a></p>
             <p>Powered by <a target="_blank" href="https://fortnite-api.com/">Fortnite-API.com</a></p>
-            <p>Graphics by <a target="_blank" href="https://fortnite.gg/">Fortnite.gg</a></p>
-        </footer>
+            <p><a target="_blank" href="https://github.com/jackwellerreal/fortnite/">Github</a></p>
+        </div>
     </div>
     <div class="right">
-        <div class="header">
-            <h1>Results</h1>
-        </div>
-        <div class="results">
-            <div class="results-item">
-                <img id="result-image" src="assets/images/search.png" />
-                <div class="results-text">
-                    <h2 id="result-name">Search for an item!</h2>
-                    <p id="result-rarity"></p>
-                    <p id="result-desc" style="margin-top: 0.5rem; font-style: italic;"></p>
-                    <p id="result-intro" style="color: rgba(255, 255, 255, 0.75);"></p>
+        <div>
+            <div class="header">
+                <h1>Results</h1>
+            </div>
+            <div class="results">
+                <div class="results-item">
+                    <img id="result-image" src="assets/images/search.png" />
+                    <div class="results-text">
+                        <h2 id="result-name">Search for an item!</h2>
+                        <p id="result-rarity"></p>
+                        <p id="result-desc" style="margin-top: 0.5rem; font-style: italic;"></p>
+                        <p id="result-intro" style="color: rgba(255, 255, 255, 0.75);"></p>
+                    </div>
+                </div>
+                <div class="results-analysis">
+                    <p id="result-lastseen"></p>
+                    <p id="result-occurances"></p>
+                    <p id="result-pattern"></p>
+                    <p id="result-prediction"></p>
                 </div>
             </div>
-            <div class="results-analysis">
-                <p id="result-lastseen"></p>
-                <p id="result-occurances"></p>
-                <p id="result-pattern"></p>
-                <p id="result-prediction"></p>
-            </div>
+        </div>
+        <div class="explanation">
+            <p id="result-desc" style="color: rgba(255, 255, 255, 0.75); font-style: italic;">
+                How it works:
+                <br>
+                This tool uses the Fortnite-API to get a list of every time a certain item has been in the item shop. It then calculates the average time between each occurance and uses that to predict the next time it will be in the item shop.
+                <br><br>
+                It's important to understand that this is just a prediction and the actual time may vary.
+            </p>
         </div>
     </div>
 

@@ -64,38 +64,43 @@ a {
     cursor: pointer;
 }
 
-.left {
+.left, .right  {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 2rem;
+    margin: 1rem;
 }
 
-.right {
-    margin: 2rem;
+.header {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
-input {
-    padding: 0.5rem;
+.form input {
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     font-family: 'fn-normal', sans-serif;
     font-size: 1.5rem;
 }
 
-input:active, input:focus {
+.form input:active, .form input:focus {
     outline: none;
 }
 
-button {
-    padding: 0.5rem;
+.form button {
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     font-family: 'fn-normal', sans-serif;
@@ -107,6 +112,9 @@ button {
 
 .examples {
     margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .examples ul {
@@ -123,8 +131,19 @@ button {
     background-size: 15px 15px;
 }
 
+.credits {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
 .results-item {
     display: flex;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .results-item img {
@@ -138,9 +157,17 @@ button {
 
 .results-analysis {
     margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
-
+.explanation {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
 
 .rainbow {
     background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
