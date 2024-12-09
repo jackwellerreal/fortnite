@@ -2,6 +2,7 @@ const search = new URLSearchParams(window.location.search).get("s") || "";
 
 document.getElementById("search-box").value = search;
 
+const favicon = document.getElementById("favicon");
 const resultName = document.getElementById("result-name");
 const resultDesc = document.getElementById("result-desc");
 const resultRarity = document.getElementById("result-rarity");
@@ -84,6 +85,7 @@ if (search === "") {
                 }`;
                 resultIntro.innerHTML = item.introduction.text;
                 resultImage.src = item.images.icon;
+                favicon.href = item.images.icon;
 
                 // If there is no shop history, display appropriate message
                 if (!item.shopHistory || item.shopHistory.length === 0) {
