@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'fn-normal';
-    src: url('./assets/fonts/fn-normal.woff2') format('woff2');
+    font-family: "fn-normal";
+    src: url("./assets/fonts/fn-normal.woff2") format("woff2");
     font-weight: normal;
 }
 
 @font-face {
-    font-family: 'fn-bold';
-    src: url('./assets/fonts/fn-bold.woff2') format('woff2');
+    font-family: "fn-bold";
+    src: url("./assets/fonts/fn-bold.woff2") format("woff2");
     font-weight: bold;
 }
 
 @font-face {
-    font-family: 'fn-title';
-    src: url('./assets/fonts/fn-title.woff2') format('woff2');
+    font-family: "fn-title";
+    src: url("./assets/fonts/fn-title.woff2") format("woff2");
     font-weight: bold;
 }
 
@@ -27,7 +27,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     overflow: hidden;
-    font-family: 'font-normal', sans-serif;
+    font-family: "font-normal", sans-serif;
     height: 100vh;
     background-image: url(./assets/images/background.jpg);
     background-position: center;
@@ -35,36 +35,38 @@ body {
 
 h1 {
     color: #fff;
-    font-family: 'fn-title', sans-serif;
+    font-family: "fn-title", sans-serif;
     font-size: 3rem;
-    text-shadow: 0 5px 3px rgba(0,0,0,.2);
+    text-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
 }
 
 h2 {
     color: #fff;
-    font-family: 'fn-bold', sans-serif;
+    font-family: "fn-bold", sans-serif;
     font-size: 2rem;
-    text-shadow: 0 5px 3px rgba(0,0,0,.2);
+    text-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
 }
 
-p, label {
+p,
+label {
     color: #fff;
-    font-family: 'fn-normal', sans-serif;
+    font-family: "fn-normal", sans-serif;
     font-size: 1.5rem;
-    text-shadow: 0 5px 3px rgba(0,0,0,.2);
+    text-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
 }
 
 a {
     color: #fff;
-    font-family: 'fn-normal', sans-serif;
+    font-family: "fn-normal", sans-serif;
     font-size: 1.5rem;
-    text-shadow: 0 5px 3px rgba(0,0,0,.2);
+    text-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     cursor: pointer;
 }
 
-.left, .right  {
+.left,
+.right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -91,11 +93,12 @@ a {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    font-family: 'fn-normal', sans-serif;
+    font-family: "fn-normal", sans-serif;
     font-size: 1.5rem;
 }
 
-.form input:active, .form input:focus {
+.form input:active,
+.form input:focus {
     outline: none;
 }
 
@@ -103,7 +106,7 @@ a {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    font-family: 'fn-normal', sans-serif;
+    font-family: "fn-normal", sans-serif;
     font-size: 1.5rem;
     background-color: #333;
     color: #fff;
@@ -120,14 +123,14 @@ a {
 .examples ul {
     display: flex;
     flex-direction: column;
-    list-style-position: inside; 
+    list-style-position: inside;
     list-style-type: none;
 }
 
 .examples li {
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     padding-left: 20px;
-    background: url('assets/images/hashtag.png') no-repeat left center; 
+    background: url("assets/images/hashtag.png") no-repeat left center;
     background-size: 15px 15px;
 }
 
@@ -136,6 +139,11 @@ a {
     padding: 1rem;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.25);
+}
+
+.credits p,
+.credits a {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .results-item {
@@ -167,13 +175,30 @@ a {
     padding: 1rem;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+.explanation p,
+.explanation a {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .rainbow {
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet,
+        red
+    );
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
     background-size: 200%;
     animation: emphasisScroll 1s linear infinite;
 }
